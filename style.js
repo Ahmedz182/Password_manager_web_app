@@ -1,15 +1,20 @@
 
 
 document.getElementById('button').addEventListener("click", addpass);
+document.getElementById('show').addEventListener("click", showpass);
+function showpass() {
+    if (tdpass.className == ('hidetext')) {
+        tdpass.classList.remove('hidetext');
+    } else {
+        tdpass.classList.add('hidetext');
+    }
 
+}
 function addpass(e) {
     var weblink = document.getElementById('link').value
     var email = document.getElementById('emails').value
     var pass = document.getElementById('password').value
-
-    // var weblinktxt = document.getElementById('webtxt').innerText = weblink
-    // var emailtxt = document.getElementById('emailtxt').innerText = email
-    // var passtxt = document.getElementById('pass').innerText = pass
+    var user = document.getElementById('Username').value
 
     const trw = document.createElement('tr');
     trw.setAttribute("id", "man");
@@ -22,17 +27,21 @@ function addpass(e) {
     tdemail.setAttribute("id", "td2");
     tdemail.innerText = email;
 
+    const tduser = document.createElement('td');
+    tduser.setAttribute("id", "td5");
+    tduser.innerText = user;
+
     const tdpass = document.createElement('td');
     tdpass.setAttribute("id", "td3");
     tdpass.classList.add('hidetext');
     tdpass.innerText = pass;
+    const edit = document.createElement('i');
+    edit.classList.add("fa", "fa-eye-slash");
+    edit.setAttribute("id", "show");
 
     const act = document.createElement('td');
     act.setAttribute("id", "td4");
 
-
-    // const edit = document.createElement('i');
-    // edit.classList.add("fa", "fa-edit");
 
 
     const trash = document.createElement('i');
@@ -41,28 +50,19 @@ function addpass(e) {
     document.getElementById("tab").appendChild(trw);
     document.getElementById("tab").appendChild(tdweb);
     document.getElementById("tab").appendChild(tdemail);
+    document.getElementById("tab").appendChild(tduser);
     document.getElementById("tab").appendChild(tdpass);
-    document.getElementById("tab").appendChild(act);
-    // document.getElementById("tab").appendChild(edit);
+    document.getElementById("tab").appendChild(edit);
     document.getElementById("tab").appendChild(trash);
 
 
     var weblink = document.getElementById('link').value = ''
     var email = document.getElementById('emails').value = ''
     var pass = document.getElementById('password').value = ''
+
+    var user = document.getElementById('Username').value = ''
+
     e.preventDefault();
 
 
 }
-// const act = document.createElement('tr');
-
-
-
-
-
-
-
-
-// document.getElementById("tab").appendChild(act2);
-// document.getElementById("tab").appendChild(edit);
-// document.getElementById("tab").appendChild(trash);
