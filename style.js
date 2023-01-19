@@ -31,8 +31,8 @@ function addpass(e) {
     act.setAttribute("id", "td4");
 
 
-    const edit = document.createElement('i');
-    edit.classList.add("fa", "fa-edit");
+    // const edit = document.createElement('i');
+    // edit.classList.add("fa", "fa-edit");
 
 
     const trash = document.createElement('i');
@@ -43,7 +43,7 @@ function addpass(e) {
     document.getElementById("tab").appendChild(tdemail);
     document.getElementById("tab").appendChild(tdpass);
     document.getElementById("tab").appendChild(act);
-    document.getElementById("tab").appendChild(edit);
+    // document.getElementById("tab").appendChild(edit);
     document.getElementById("tab").appendChild(trash);
 
 
