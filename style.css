@@ -12,6 +12,7 @@ label{
     font-weight: bolder ;
 }
 input{
+    
     border-radius: 5px;
     border-color: gray;
 }
@@ -32,3 +33,6 @@ button:hover{
     background-color: #0b4fb4;
 }
 .hidetext { -webkit-text-security: disc; /* Default */ }
+label{
+    margin-bottom: 10px;
+}
