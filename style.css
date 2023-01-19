@@ -1,0 +1,34 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;800&display=swap');
+
+body{
+    background-color: #0d6efd;
+}
+form{
+    background-color: rgb(219, 219, 219) ;
+    margin: auto;
+}
+label{
+    font-weight: bolder ;
+}
+input{
+    border-radius: 5px;
+    border-color: gray;
+}
+    
+.forms{
+    margin-top: -50px;
+}
+input:focus,input:active{
+    border-color: gray;
+}
+h1{
+    font-family: 'Orbitron', sans-serif;
+}
+.passshow{
+    display: flex;
+}
+button:hover{
+    background-color: #0b4fb4;
+}
+.hidetext { -webkit-text-security: disc; /* Default */ }
