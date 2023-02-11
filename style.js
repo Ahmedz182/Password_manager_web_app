@@ -1,5 +1,6 @@
 document.getElementById('button').addEventListener("click", addpass);
 
+var i = 0;
 function addpass(e) {
     var weblink = document.getElementById('link').value
     var email = document.getElementById('emails').value
@@ -11,22 +12,26 @@ function addpass(e) {
     } else {
 
         const trw = document.createElement('tr');
-        trw.setAttribute("id", "man");
+        trw.setAttribute("id", i);
+
+        const sr = document.createElement('td');
+        sr.setAttribute("id", i);
+        sr.innerText = i;
 
         const tdweb = document.createElement('td');
-        tdweb.setAttribute("id", "td1");
+        tdweb.setAttribute("id", i);
         tdweb.innerText = weblink;
 
         const tdemail = document.createElement('td');
-        tdemail.setAttribute("id", "td2");
+        tdemail.setAttribute("id", i);
         tdemail.innerText = email;
 
         const tduser = document.createElement('td');
-        tduser.setAttribute("id", "td3");
+        tduser.setAttribute("id", i);
         tduser.innerText = user;
 
         const tdpass = document.createElement('td');
-        tdpass.setAttribute("id", "td4");
+        tdpass.setAttribute("id", i);
         tdpass.classList.add('hidetext');
         tdpass.innerText = pass;
 
@@ -40,6 +45,7 @@ function addpass(e) {
 
 
         document.getElementById("tab").appendChild(trw);
+        document.getElementById("tab").appendChild(sr);
         document.getElementById("tab").appendChild(tdweb);
         document.getElementById("tab").appendChild(tdemail);
         document.getElementById("tab").appendChild(tduser);
@@ -69,6 +75,7 @@ function addpass(e) {
 
         }
         function deleted() {
+            sr.remove();
             tdweb.remove();
             tdemail.remove();
             tdpass.remove();
@@ -79,6 +86,7 @@ function addpass(e) {
 
 
         }
+        i++;
     }
     e.preventDefault();
 
