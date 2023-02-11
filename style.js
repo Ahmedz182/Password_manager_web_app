@@ -6,7 +6,7 @@ function addpass(e) {
     var pass = document.getElementById('password').value
     var user = document.getElementById('Username').value
 
-    if (weblink == "" && email == "" && pass == "" && user == "") {
+    if (weblink == "" || email == "" || pass == "" || user == "") {
         alert("Please fill all text fields");
     } else {
 
