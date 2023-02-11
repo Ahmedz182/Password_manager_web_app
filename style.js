@@ -69,7 +69,15 @@ function addpass(e) {
 
         }
         function deleted() {
-            trw.remove();
+            tdweb.remove();
+            tdemail.remove();
+            tdpass.remove();
+            tduser.remove();
+            tdpass.remove();
+            show.remove();
+            trash.remove();
+
+
         }
     }
     e.preventDefault();
