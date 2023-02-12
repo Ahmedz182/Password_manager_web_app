@@ -66,5 +66,6 @@ function addpass(e) {
 
     function deleted() {
         trw.remove();
+        i--;
     }
 }

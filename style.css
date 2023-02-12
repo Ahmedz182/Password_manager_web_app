@@ -36,3 +36,6 @@ button:hover{
 label{
     margin-bottom: 10px;
 }
+th{
+    cursor: pointer;
+}
