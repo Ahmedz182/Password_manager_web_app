@@ -1,6 +1,6 @@
 document.getElementById('button').addEventListener("click", addpass);
 
-var i = 0;
+var i = 1;
 function addpass(e) {
     var weblink = document.getElementById('link').value
     var email = document.getElementById('emails').value
@@ -37,7 +37,7 @@ function addpass(e) {
 
         const show = document.createElement('button');
         show.classList.add("btn", "fa", "fa-eye-slash");
-        show.setAttribute("id", "shows");
+        show.setAttribute("id", "show");
 
         const trash = document.createElement('button');
         trash.classList.add("btn", "fa", "fa-trash");
@@ -45,13 +45,13 @@ function addpass(e) {
 
 
         document.getElementById("tab").appendChild(trw);
-        document.getElementById("tab").appendChild(sr);
-        document.getElementById("tab").appendChild(tdweb);
-        document.getElementById("tab").appendChild(tdemail);
-        document.getElementById("tab").appendChild(tduser);
-        document.getElementById("tab").appendChild(tdpass);
-        document.getElementById("tab").appendChild(show);
-        document.getElementById("tab").appendChild(trash);
+        trw.appendChild(sr);
+        trw.appendChild(tdweb);
+        trw.appendChild(tdemail);
+        trw.appendChild(tduser);
+        trw.appendChild(tdpass);
+        trw.appendChild(show);
+        trw.appendChild(trash);
 
 
         var weblink = document.getElementById('link').value = ''
@@ -59,22 +59,18 @@ function addpass(e) {
         var pass = document.getElementById('password').value = ''
         var user = document.getElementById('Username').value = ''
 
-        document.getElementById('shows').addEventListener("click", showpass);
+        document.getElementById('show').addEventListener("click", showpass);
+
+
         document.getElementById('del').addEventListener("click", deleted);
+
         function showpass() {
-
-            if (tdpass.classList.contains = 'hidetext') {
-                tdpass.classList.replace('hidetext', 'show');
-                show.classList.replace("fa-eye-slash", "fa-eye");
-            }
-
-            else if (tdpass.classList.contains = 'show') {
-                tdpass.classList.replace('show', 'hidetext');
-                show.classList.replace("fa-eye", "fa-eye-slash");
-            }
-
+            tdpass.classList.replace('hidetext', 'show');
+            show.classList.replace("fa-eye-slash", "fa-eye");
         }
+
         function deleted() {
+
             sr.remove();
             tdweb.remove();
             tdemail.remove();
