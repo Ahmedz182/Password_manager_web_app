@@ -62,9 +62,9 @@ function addpass(e) {
             show.classList.replace("fa-eye", "fa-eye-slash");
         }
     }
-}
 
-function deleted() {
-    trw.remove();
-}
 
+    function deleted() {
+        trw.remove();
+    }
+}
