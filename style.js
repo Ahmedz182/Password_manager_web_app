@@ -52,11 +52,19 @@ function addpass(e) {
     i++;
 
     function showpass() {
-        tdpass.classList.replace('hidetext', 'show');
-        show.classList.replace("fa-eye-slash", "fa-eye");
-    }
 
-    function deleted() {
-        trw.remove();
+        if (tdpass.classList.contains("hidetext")) {
+            tdpass.classList.replace('hidetext', 'show');
+            show.classList.replace("fa-eye-slash", "fa-eye");
+        }
+        else {
+            tdpass.classList.replace('show', 'hidetext');
+            show.classList.replace("fa-eye", "fa-eye-slash");
+        }
     }
 }
+
+function deleted() {
+    trw.remove();
+}
+
