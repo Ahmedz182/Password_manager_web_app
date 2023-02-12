@@ -44,10 +44,10 @@ function addpass(e) {
     document.getElementById("tab").appendChild(trw);
     trw.append(sr, tdweb, tdemail, tduser, tdpass, show, trash);
 
-    document.getElementById('link').value = '';
-    document.getElementById('emails').value = '';
-    document.getElementById('password').value = '';
-    document.getElementById('Username').value = '';
+    document.getElementById('link').value = null;
+    document.getElementById('emails').value = null;
+    document.getElementById('password').value = null;
+    document.getElementById('Username').value = null;
 
     i++;
 
